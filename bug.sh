@@ -1,4 +1,4 @@
-#!/#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # Set up the remote state
 cd base
