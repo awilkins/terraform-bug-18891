@@ -11,6 +11,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-output "change_to_list" {
+output "change_map" {
   value = "I am a string, and I get on your ping."
 }
