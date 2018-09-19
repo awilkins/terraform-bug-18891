@@ -1,16 +1,17 @@
-#!/usr/bin/env bash
+#!/#!/usr/bin/env bash
 
-# Set up the remote state
+echo Set up the remote state
 cd base
 terraform apply
 
+echo Consume the remote state
 cd ..
 cd top
 terraform apply
 
 cd ..
 
-# now change the remote state to a list
+eco Now change the remote state to a list
 
 git checkout bug
 
@@ -20,5 +21,13 @@ terraform apply
 cd ..
 cd top
 
-# Now this line (or a plan or apply) will fail
+echo Now this plan / refresh /apply will fail
+
+echo Plan..
+terraform plan
+
+echo Refresh..
 terraform refresh
+
+echo Apply..
+terraform apply
