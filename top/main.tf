@@ -23,5 +23,10 @@ data "terraform_remote_state" "base" {
 
 module "pass_me_a_param" {
   source = "module"
-  change_to_list = "${data.terraform_remote_state.base.change_to_list}"
+  change_to_list = "${data.terraform_remote_state.base.change_map["one"]}"
+}
+
+
+output "do_something" {
+  value = "${module.pass_me_a_param.do_something}"
 }
