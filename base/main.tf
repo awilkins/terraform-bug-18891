@@ -12,5 +12,7 @@ provider "aws" {
 }
 
 output "change_map" {
-  value = "I am a string, and I get on your ping."
+  value = {
+    one = "String 1"
+  }
 }
