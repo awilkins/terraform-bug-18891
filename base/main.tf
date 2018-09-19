@@ -14,6 +14,6 @@ provider "aws" {
 output "change_map" {
   value = {
     one = [ "list 1", "list 2" ]
-    two = "string 2" 
+    two = [ "string 2", "string 3" ] 
   }
 }
