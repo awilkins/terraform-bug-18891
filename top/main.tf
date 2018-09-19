@@ -23,7 +23,10 @@ data "terraform_remote_state" "base" {
 
 module "pass_me_a_param" {
   source = "module"
-  change_to_list = "${data.terraform_remote_state.base.change_map["one"]}"
+  #change_to_list = "${data.terraform_remote_state.base.change_map["one"]}"
+  
+  # Comment the real var out and pass a phony list just to work around bug
+  change_to_list = ["one", "two", "three"]
 }
 
 
