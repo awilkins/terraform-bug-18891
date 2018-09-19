@@ -31,3 +31,13 @@ terraform refresh
 
 echo Apply..
 terraform apply
+
+
+echo Now workaround bug by fudging input
+
+git checkout workaround
+terraform refresh
+
+echo This plan will now succeed
+git checkout bug
+terraform plan
