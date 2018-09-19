@@ -1,4 +1,4 @@
-#!/#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 echo Set up the remote state
 cd base
@@ -11,7 +11,7 @@ terraform apply
 
 cd ..
 
-eco Now change the remote state to a list
+echo Now change the remote state to a list
 
 git checkout bug
 
